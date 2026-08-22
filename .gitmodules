@@ -1,6 +1,6 @@
 [submodule "toolkits/scholar-search-kit"]
 	path = toolkits/scholar-search-kit
-	url = ../slr-search-kit
+	url = ../scholar-search-kit
 [submodule "toolkits/scholar-bib-kit"]
 	path = toolkits/scholar-bib-kit
 	url = ../scholar-bib-kit
