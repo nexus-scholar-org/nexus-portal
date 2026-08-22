@@ -1,0 +1,18 @@
+[submodule "toolkits/scholar-search-kit"]
+	path = toolkits/scholar-search-kit
+	url = ../slr-search-kit
+[submodule "toolkits/scholar-bib-kit"]
+	path = toolkits/scholar-bib-kit
+	url = ../scholar-bib-kit
+[submodule "toolkits/scholar-monitor-kit"]
+	path = toolkits/scholar-monitor-kit
+	url = ../scholar-monitor-kit
+[submodule "toolkits/scholar-graph-kit"]
+	path = toolkits/scholar-graph-kit
+	url = ../scholar-graph-kit
+[submodule "toolkits/scholar-pdf-kit"]
+	path = toolkits/scholar-pdf-kit
+	url = ../scholar-pdf-kit
+[submodule "toolkits/scholar-rag-kit"]
+	path = toolkits/scholar-rag-kit
+	url = ../scholar-rag-kit
