@@ -1,0 +1,129 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+
+\title{The Publishing Ecosystem}
+\subtitle{Module 0.3: Journals, Conferences, and Peer Review}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+% --- TITLE SLIDE ---
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% --- LEARNING OBJECTIVES ---
+\begin{frame}{What You'll Learn}
+  By the end of this lesson, you will be able to:
+  \begin{enumerate}
+    \item \textbf{Map} the lifecycle of an academic manuscript.
+    \item \textbf{Explain} the mechanics of the peer review process.
+    \item \textbf{Compare} the roles of journals vs. conferences across disciplines.
+    \item \textbf{Define} publishing metrics (Impact Factor, h-index) and their limits.
+  \end{enumerate}
+\end{frame}
+
+% --- LIFECYCLE OF A MANUSCRIPT ---
+\begin{frame}{The Peer Review Filter}
+  \begin{center}
+  \resizebox{0.95\linewidth}{!}{
+  \begin{tikzpicture}[node distance=1.0cm and 1.5cm]
+    \node[card, fill=NexusBlue!10, draw=NexusBlue] (submit) {\textbf{Submit Manuscript}};
+    \node[card, fill=gray!10, draw=gray, right=of submit] (editor) {\textbf{Desk Review (Editor)}};
+    \node[primarycard, right=of editor] (review) {\textbf{Peer Review}\\(2-4 Experts)};
+    
+    \node[successcard, above right=0.2cm and 1cm of review] (accept) {Accept (Rare)};
+    \node[card, fill=NexusOrange!20, draw=NexusOrange, right=of review] (revise) {\textbf{Revise \& Resubmit}};
+    \node[card, fill=NexusRed!20, draw=NexusRed, below right=0.2cm and 1cm of review] (reject) {Reject};
+
+    \draw[flowarrow] (submit) -- (editor);
+    \draw[flowarrow] (editor) -- (review);
+    \draw[flowarrow] (review) -- (accept);
+    \draw[flowarrow] (review) -- (revise);
+    \draw[flowarrow] (review) -- (reject);
+    
+    % Loop back for R&R
+    \draw[flowarrow, dashed] (revise.south) |- ++(0,-1.5) -| (editor.south) node[pos=0.25, below, font=\scriptsize] {Authors submit revisions};
+  \end{tikzpicture}
+  }
+  \end{center}
+\end{frame}
+
+% --- TYPES OF BLINDING ---
+\begin{frame}{Types of Peer Review}
+  \begin{block}{Minimizing Bias}
+    \begin{itemize}
+      \item \textbf{Single-Blind:} Reviewers know who you are. You do not know who the reviewers are. (Standard in many traditional journals).
+      \item \textbf{Double-Blind:} Neither side knows the other's identity. (Reduces prestige and gender bias).
+      \item \textbf{Open Review:} Identities are known to all, and reviews are often published publicly alongside the paper.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% --- JOURNALS VS CONFERENCES ---
+\begin{frame}{Know Your Currency}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Biology, Physics, SocSci}
+        \textbf{Journals are King.}
+        \begin{itemize}
+          \item Archival, final record of science.
+          \item Cycle: Months to Years.
+          \item Conferences are just for networking and sharing "preliminary" work.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Computer Science \& AI}
+        \textbf{Conferences are King.}
+        \begin{itemize}
+          \item Highly selective (e.g., NeurIPS, CVPR).
+          \item Fierce peer-review process.
+          \item Cycle: Weeks to Months (moves at the speed of tech).
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- ACADEMIC METRICS ---
+\begin{frame}{The Prestige Economy: Metrics}
+  \begin{exampleblock}{Keeping Score with Citations}
+    \begin{itemize}
+      \item \textbf{Impact Factor (For Journals):} The average number of citations received in a year by papers published in that journal during the two preceding years.
+      \item \textbf{h-index (For Authors):} An author has index $h$ if $h$ of their papers have at least $h$ citations each.
+    \end{itemize}
+  \end{exampleblock}
+  \vspace{0.3cm}
+  \textbf{Goodhart's Law:} "When a measure becomes a target, it ceases to be a good measure." (Beware of metric manipulation).
+\end{frame}
+
+% --- KEY TAKEAWAY ---
+\begin{frame}{Key Takeaway}
+  \begin{block}{What We Accomplished}
+    \begin{enumerate}
+      \item \textbf{Peer Review}: 'Revise and Resubmit' is the goal, not 'Accept'.
+      \item \textbf{Venues}: Match your output (Journal vs. Conference) to your field's norms.
+      \item \textbf{Metrics}: Understand the h-index, but don't optimize purely for it.
+    \end{enumerate}
+  \end{block}
+  \vspace{0.3cm}
+  \textbf{Next:} Module 0.4 --- Predatory Publishing
+\end{frame}
+
+% --- EXERCISE PREVIEW ---
+\begin{frame}{Your Turn: Exercise}
+  \begin{exampleblock}{Exercise: Calculate the h-index}
+    Given a list of a researcher's publications and their citation counts, sort the data and calculate their exact h-index manually.
+  \end{exampleblock}
+\end{frame}
+
+% --- STANDOUT CLOSE ---
+\begin{frame}[standout]
+  Don't optimize for the metric.\\
+  Optimize for the science.
+\end{frame}
+
+\end{document}

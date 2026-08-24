@@ -1,0 +1,76 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+
+\title{Python for Researchers}
+\subtitle{Module 6.2: The PhD Survival Guide}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{What You'll Learn}
+  \begin{enumerate}
+    \item \textbf{Explain} why point-and-click software limits reproducibility.
+    \item \textbf{Identify} the core tools in the modern academic Python stack.
+    \item \textbf{Automate} repetitive manual tasks.
+    \item \textbf{Utilize} LLMs to write code without memorizing syntax.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{The Excel Trap vs. The Audit Trail}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Excel (Point-and-Click)}
+        \begin{itemize}
+          \item Manual data deletion.
+          \item Accidental sorting errors.
+          \item No record of changes.
+          \item Highly prone to human error.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Python (Scripting)}
+        \begin{itemize}
+          \item Code is an explicit audit trail.
+          \item Fully reproducible.
+          \item Re-run the whole analysis in 1 second.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{The Academic Stack}
+  You do not need to be a software engineer. You just need 3 tools:
+  \vspace{0.3cm}
+  \begin{enumerate}
+    \item \textbf{Jupyter Notebooks:} The interactive interface where you write code and see graphs immediately.
+    \item \textbf{Pandas:} The data engine. Loads CSVs, filters data, and runs statistics (Excel on steroids).
+    \item \textbf{Matplotlib / Seaborn:} The plotting engines. Creates publication-quality, high-resolution figures.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{You Don't Have to Memorize Syntax}
+  \textbf{The Old Way:} Spend weeks reading textbooks to memorize Pandas syntax.
+  
+  \vspace{0.5cm}
+  \textbf{The New Way:} Ask an LLM (ChatGPT/Claude).
+  \begin{itemize}
+    \item \textit{``I have a CSV called data.csv. Write a Python script using pandas to load it, remove rows where 'Age' is missing, and create a scatter plot of Age vs. Income using seaborn.''}
+  \end{itemize}
+  \vspace{0.5cm}
+  \textit{You only need to understand the logic. Let the AI write the syntax.}
+\end{frame}
+
+\begin{frame}[standout]
+  Stop doing the computer's job.\\
+  Start doing the science.
+\end{frame}
+
+\end{document}

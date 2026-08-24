@@ -1,0 +1,126 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+\usepackage{listings}
+\usepackage{booktabs}
+
+\title{Critical Reading \& Synthesis}
+\subtitle{Module 3.1: Analyzing Literature}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+% --- TITLE SLIDE ---
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% --- LEARNING OBJECTIVES ---
+\begin{frame}{What You'll Learn}
+  By the end of this lesson, you will be able to:
+  \begin{enumerate}
+    \item \textbf{Apply} an extraction template for comparable data.
+    \item \textbf{Build} a synthesis matrix (concept matrix).
+    \item \textbf{Distinguish} summary from synthesis.
+    \item \textbf{Identify} convergence, divergence, gaps, and evolution.
+  \end{enumerate}
+\end{frame}
+
+% --- THE PROBLEM ---
+\begin{frame}{Summary $\neq$ Synthesis}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Summary (Don't do this)}
+        ``Smith (2020) found X.\\
+        Jones (2021) found Y.\\
+        Lee (2022) found Z.''
+        \vspace{0.2cm}
+        
+        \textit{A grocery list of individual findings.}
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Synthesis (Do this)}
+        ``Three studies converge on X (Smith 2020; Jones 2021; Lee 2022), though Patel (2023) challenges this, arguing Y.''
+        \vspace{0.2cm}
+        
+        \textit{A conversation between studies.}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- EXTRACTION TEMPLATE ---
+\begin{frame}{Step 1: The Extraction Template}
+  \textbf{Problem:} Free-form notes on 50 papers = 50 incomparable formats.\\
+  \textbf{Solution:} A standardized table for every paper.
+  \vspace{0.3cm}
+  
+  \begin{table}
+  \footnotesize
+  \begin{tabular}{lp{8cm}}
+  \toprule
+  \textbf{Column} & \textbf{What to Extract} \\
+  \midrule
+  Author / Year & Citation reference \\
+  Research Question & What did they ask? \\
+  Methodology & Quantitative, qualitative, mixed? \\
+  Sample / Data & Who or what did they study? \\
+  Key Findings & The core result \\
+  Limitations & What they acknowledged or missed \\
+  Relevance & How does this connect to MY thesis? \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+% --- SYNTHESIS MATRIX ---
+\begin{frame}{Step 2: The Synthesis Matrix}
+  \textbf{Flip the table:} Rows = themes, Columns = papers.
+  \vspace{0.3cm}
+  
+  \begin{table}
+  \footnotesize
+  \begin{tabular}{l|c|c|c|c}
+  \toprule
+  \textbf{Theme} & \textbf{Smith '20} & \textbf{Jones '21} & \textbf{Lee '22} & \textbf{Patel '23} \\
+  \midrule
+  Data quality & Addressed & Addressed & --- & Addressed \\
+  Model architecture & CNN & RNN & Transformer & CNN \\
+  Ethics / bias & --- & --- & --- & Addressed \\
+  Sample size & 500 & 1200 & 300 & 8000 \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+  \vspace{0.2cm}
+  \textit{Empty cells (---) are not failures. They are gaps --- and gaps are where your thesis lives.}
+\end{frame}
+
+% --- FOUR MOVES ---
+\begin{frame}{The Four Synthesis Moves}
+  When writing from the matrix, use these intellectual moves:
+  \vspace{0.3cm}
+  \begin{enumerate}
+    \item \textbf{Convergence:} ``Three studies independently found that...''
+    \item \textbf{Divergence:} ``However, Patel (2023) challenges this...''
+    \item \textbf{Gap:} ``No study has addressed the impact of X on Y.''
+    \item \textbf{Evolution:} ``Early work (2015--2018) focused on X, but the field has shifted toward Y.''
+  \end{enumerate}
+\end{frame}
+
+% --- EXERCISE PREVIEW ---
+\begin{frame}{Your Turn: Exercise}
+  \begin{exampleblock}{Exercise: The Synthesis Matrix Builder}
+    Read 5 provided abstracts, build an extraction template, identify themes, and construct a synthesis matrix. Then write one synthesis paragraph using all four moves.
+  \end{exampleblock}
+\end{frame}
+
+% --- STANDOUT CLOSE ---
+\begin{frame}[standout]
+  Your literature review is not a grocery list.\\
+  It's a conversation --- and you need to tell\\
+  your reader what the room is saying.
+\end{frame}
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+
+\title{Reference Management \& BibTeX}
+\subtitle{Module 1.2: Reading \& Managing Knowledge}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{What You'll Learn}
+  \begin{enumerate}
+    \item \textbf{Explain} the function of a reference manager.
+    \item \textbf{Compare} Zotero, Mendeley, and EndNote.
+    \item \textbf{Deconstruct} a BibTeX file.
+    \item \textbf{Automate} citation ingestion.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{The Problem with Manual Citations}
+  \begin{alertblock}{Manual Formatting is a Trap}
+    Typing citations manually means if you submit to a new journal with a different style (e.g., APA $\rightarrow$ IEEE), you must reformat every single comma, italic, and initial by hand.
+  \end{alertblock}
+  \begin{exampleblock}{The Solution}
+    A reference manager separates the \textbf{metadata} (the data about the paper) from the \textbf{presentation} (the final formatted text).
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{The Big Three Reference Managers}
+  \begin{columns}[T]
+    \begin{column}{0.33\textwidth}
+      \textbf{Zotero (Recommended)}
+      \begin{itemize}
+        \item Open-source \& free.
+        \item Best browser extension.
+        \item Highly customizable.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \textbf{Mendeley}
+      \begin{itemize}
+        \item Owned by Elsevier.
+        \item Excellent built-in PDF reader/annotator.
+        \item Closed ecosystem.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \textbf{EndNote}
+      \begin{itemize}
+        \item The legacy standard.
+        \item Expensive (unless university pays).
+        \item Clunky interface.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Under the Hood: BibTeX}
+  BibTeX is the universal plain-text standard for academic metadata.
+  
+\begin{verbatim}
+@article{vaswani2017attention,
+  title={Attention is all you need},
+  author={Vaswani, Ashish and Shazeer, Noam},
+  journal={Advances in neural information processing systems},
+  volume={30},
+  year={2017}
+}
+\end{verbatim}
+
+  \textit{The text \texttt{vaswani2017attention} is the \textbf{Citation Key}. You use this ID to insert the reference into your document.}
+\end{frame}
+
+\begin{frame}[standout]
+  Your job is to generate ideas.\\
+  Let the computer worry about the commas.
+\end{frame}
+
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+
+\title{Collaborative Research with Git}
+\subtitle{Module 4.5: Writing \& Producing Research}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{What You'll Learn}
+  \begin{enumerate}
+    \item \textbf{Explain} version control: commits, branches, merges.
+    \item \textbf{Distinguish} Git (local) from GitHub (cloud collaboration).
+    \item \textbf{Implement} a Pull Request workflow for co-authored papers.
+    \item \textbf{Configure} Overleaf $\leftrightarrow$ GitHub sync.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{The Problem: Filename Hell}
+  \begin{center}
+    \texttt{paper\_draft\_v2\_FINAL\_revised\_JohnEdits.docx}
+  \end{center}
+  \vspace{0.4cm}
+  This is not version control. This is chaos. It causes:
+  \begin{itemize}
+    \item Overwritten changes from co-authors
+    \item No record of \textit{what} changed or \textit{why}
+    \item Submitted drafts missing figures from ``the other version''
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Git: The Infinite Undo Button}
+  A \textbf{commit} is a timestamped snapshot of your project with a description.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Example commit history}
+    \texttt{c3a1f2b} → ``Add results section for RQ1''\\
+    \texttt{7d8e91c} → ``Fix typo in abstract''\\
+    \texttt{a2b4d6e} → ``Add Figure 3 caption''
+  \end{exampleblock}
+  \vspace{0.3cm}
+  You can roll back to any commit at any time. Nothing is ever lost.
+\end{frame}
+
+\begin{frame}{The Collaboration Workflow}
+  \begin{center}
+    \textbf{Main Branch} (the official paper)\\
+    $\downarrow$\\
+    Co-author creates a \textbf{Feature Branch}\\
+    $\downarrow$\\
+    Makes edits, commits\\
+    $\downarrow$\\
+    Opens a \textbf{Pull Request} (``Review my Discussion section'')\\
+    $\downarrow$\\
+    Team reviews, comments, approves\\
+    $\downarrow$\\
+    \textbf{Merged} into Main
+  \end{center}
+\end{frame}
+
+\begin{frame}{Overleaf $\leftrightarrow$ GitHub Sync}
+  \begin{itemize}
+    \item Overleaf has a native \textbf{GitHub integration} (Settings → GitHub Sync)
+    \item Write in the Overleaf browser editor \textit{or} locally in VS Code
+    \item Push/pull keeps both environments in sync
+    \item Full Git history available on GitHub for all co-authors
+  \end{itemize}
+  \vspace{0.3cm}
+  \begin{alertblock}{Always use .gitignore}
+    Never commit \texttt{.aux}, \texttt{.log}, \texttt{.synctex.gz}, \texttt{.pdf}. Only track \texttt{.tex} and \texttt{.bib} source files.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}[standout]
+  \texttt{final\_FINAL\_v2\_ACTUALLY\_FINAL.docx}\\
+  is not a version control system.\\
+  It is a cry for help.
+\end{frame}
+
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+
+\title{Reproducibility \& Open Science}
+\subtitle{Module 5.2: Sharing \& Defending Your Research}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{What You'll Learn}
+  \begin{enumerate}
+    \item \textbf{Define} the replication crisis.
+    \item \textbf{Apply} the FAIR data principles.
+    \item \textbf{Structure} a reproducible code repository.
+    \item \textbf{Evaluate} open-access publishing routes.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{The FAIR Data Principles}
+  Throwing a CSV on your personal website is not Open Science.
+  \vspace{0.3cm}
+  \begin{itemize}
+    \item \textbf{Findable:} Hosted on a persistent repository (Zenodo, OSF) with a DOI.
+    \item \textbf{Accessible:} Clear terms of use; metadata is public even if data is restricted.
+    \item \textbf{Interoperable:} Uses open, standard formats (CSV, JSON).
+    \item \textbf{Reusable:} Includes a clear license and a data dictionary.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{The Reproducible Repository}
+  Code without an environment has an expiration date of $\sim$18 months.
+  \vspace{0.3cm}
+  \begin{exampleblock}{The Holy Trinity of Reproducibility}
+    \begin{enumerate}
+      \item \textbf{The Code:} Clean, commented scripts or notebooks.
+      \item \textbf{The Environment:} \texttt{requirements.txt}, \texttt{environment.yml}, or a Dockerfile specifying exact library versions.
+      \item \textbf{The Data:} The raw data, or a ``toy'' sample dataset if the original is too large or confidential.
+    \end{enumerate}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Open Access Publishing Routes}
+  \begin{columns}[T]
+    \begin{column}{0.33\textwidth}
+      \textbf{Preprints}
+      \begin{itemize}
+        \item arXiv, bioRxiv
+        \item Shared before peer review
+        \item Free, establishes priority
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \textbf{Gold OA}
+      \begin{itemize}
+        \item Journal website
+        \item Final peer-reviewed version
+        \item Author pays high fee (APC)
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \textbf{Green OA}
+      \begin{itemize}
+        \item University repository
+        \item Accepted manuscript version
+        \item Free for author
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[standout]
+  If your research isn't reproducible,\\
+  it's just an anecdote.
+\end{frame}
+
+\end{document}

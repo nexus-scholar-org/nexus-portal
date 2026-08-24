@@ -1,0 +1,137 @@
+% Nexus Scholar Course — Slide Deck Template
+% Compile with: latexmk -pdf -interaction=nonstopmode <filename>.tex
+%
+% This template uses the metropolis Beamer theme with the custom nexus_theme.sty.
+% Copy nexus_theme.sty into the same directory as this .tex file.
+
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+
+% ─── METADATA ───────────────────────────────────────────────────
+\title{[Lesson Title]}
+\subtitle{Module [X.Y]: [Module Name]}
+\author{Nexus Scholar Suite — Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+% ─── TITLE SLIDE ────────────────────────────────────────────────
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% ─── LEARNING OBJECTIVES ───────────────────────────────────────
+\begin{frame}{What You'll Learn}
+  By the end of this lesson, you will be able to:
+  \begin{enumerate}
+    \item \textbf{[Bloom's verb]} [Objective 1]
+    \item \textbf{[Bloom's verb]} [Objective 2]
+    \item \textbf{[Bloom's verb]} [Objective 3]
+  \end{enumerate}
+\end{frame}
+
+% ─── THE PROBLEM (HOOK / CONTEXT) ──────────────────────────────
+\begin{frame}{The Problem}
+  \begin{alertblock}{[Pain Point Title]}
+    [1-3 bullet points describing the problem this lesson solves.
+     Use the "old way" framing from course_review.md.]
+  \end{alertblock}
+  \vspace{0.3cm}
+  \begin{block}{What We'll Build}
+    [1-2 sentences describing the solution — the Nexus tool or technique.]
+  \end{block}
+\end{frame}
+
+% ─── CONCEPT SLIDES (2-4 slides) ──────────────────────────────
+\begin{frame}{[Concept 1 Title]}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Key Idea}
+        \begin{itemize}
+          \item [Point 1]
+          \item [Point 2]
+          \item [Point 3]
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Real-World Analogy}
+        [A concrete analogy that makes the concept click.]
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ─── ARCHITECTURE DIAGRAM (if applicable) ─────────────────────
+\begin{frame}{[System / Data Flow Title]}
+  \begin{center}
+  \resizebox{0.85\linewidth}{!}{
+  \begin{tikzpicture}[node distance=1.2cm and 1.5cm]
+    \node[card] (input) {\textbf{Input}\\[description]};
+    \node[primarycard, right=of input] (process) {\textbf{[Nexus Tool]}\\[key operation]};
+    \node[successcard, right=of process] (output) {\textbf{Output}\\[result format]};
+
+    \draw[flowarrow] (input) -- node[above, font=\scriptsize\bfseries] {[label]} (process);
+    \draw[accentarrow] (process) -- node[above, font=\scriptsize\bfseries] {[label]} (output);
+  \end{tikzpicture}
+  }
+  \end{center}
+\end{frame}
+
+% ─── CODE DEMONSTRATION (2-3 slides) ──────────────────────────
+\begin{frame}[fragile]{[Demo Step 1: Setup]}
+  \begin{lstlisting}[style=nexuspython]
+# Step 1: Install and verify the toolkit
+# uv run [toolkit-command] --help
+
+from [package] import [Class]
+
+[setup code — verified against actual source]
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{[Demo Step 2: Core Operation]}
+  \begin{lstlisting}[style=nexuspython]
+# Step 2: [Description of the core operation]
+
+[core code — verified against actual source]
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{[Demo Step 3: Inspect Results]}
+  \begin{lstlisting}[style=nexuspython]
+# Step 3: Examine the output
+
+[result inspection code]
+# Expected output:
+# [paste expected output here]
+  \end{lstlisting}
+\end{frame}
+
+% ─── KEY TAKEAWAY ─────────────────────────────────────────────
+\begin{frame}{Key Takeaway}
+  \begin{block}{What We Accomplished}
+    \begin{enumerate}
+      \item [Takeaway 1 — maps to Objective 1]
+      \item [Takeaway 2 — maps to Objective 2]
+      \item [Takeaway 3 — maps to Objective 3]
+    \end{enumerate}
+  \end{block}
+  \vspace{0.3cm}
+  \textbf{Next:} Module [X.Y] — [Next Lesson Title]
+\end{frame}
+
+% ─── EXERCISE PREVIEW ─────────────────────────────────────────
+\begin{frame}{Your Turn: Exercise}
+  \begin{exampleblock}{Exercise: [Title]}
+    [1-2 sentence description of what the student will do in the exercise.]
+  \end{exampleblock}
+\end{frame}
+
+% ─── STANDOUT CLOSE ───────────────────────────────────────────
+\begin{frame}[standout]
+  [A single memorable sentence that captures the lesson's essence.]
+\end{frame}
+
+\end{document}

@@ -1,0 +1,135 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+
+\title{Anatomy of a Research Paper}
+\subtitle{Module 0.1: How to Read Like a Scientist}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+% --- TITLE SLIDE ---
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% --- LEARNING OBJECTIVES ---
+\begin{frame}{What You'll Learn}
+  By the end of this lesson, you will be able to:
+  \begin{enumerate}
+    \item \textbf{Identify} the standard structural components of an academic paper.
+    \item \textbf{Explain} the specific purpose of the IMRAD sections.
+    \item \textbf{Apply} strategic reading techniques (the 3-Pass Approach).
+    \item \textbf{Distinguish} between primary articles, reviews, and preprints.
+  \end{enumerate}
+\end{frame}
+
+% --- THE PROBLEM ---
+\begin{frame}{The Novice's Mistake}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Reading Like a Novel}
+        \begin{itemize}
+          \item Starting at word 1, ending at the conclusion.
+          \item Getting stuck in the Methods section.
+          \item Spending 3 hours on a paper that isn't relevant.
+          \item Exhaustion and burnout.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Reading Like a Scientist}
+        \begin{itemize}
+          \item Reading strategically based on goals.
+          \item Treating the paper like an encyclopedia.
+          \item Triaging in 10 minutes.
+          \item Knowing exactly where to look.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- IMRAD ---
+\begin{frame}{The Blueprint: IMRAD}
+  \begin{exampleblock}{Introduction, Methods, Results, And Discussion}
+    \begin{itemize}
+      \item \textbf{Introduction:} The Porch (Why are we doing this?)
+      \item \textbf{Methods:} The Foundation (How did we do it?)
+      \item \textbf{Results:} The Rooms (What did we find?)
+      \item \textbf{Discussion:} The Neighborhood (What does it mean?)
+    \end{itemize}
+  \end{exampleblock}
+  \vspace{0.3cm}
+  \textit{Note: The Abstract is a miniature version of the entire IMRAD structure.}
+\end{frame}
+
+% --- THE 3-PASS APPROACH ---
+\begin{frame}{The Three-Pass Approach (Keshav, 2007)}
+  \begin{center}
+  \resizebox{0.92\linewidth}{!}{
+  \begin{tikzpicture}[node distance=1.2cm and 1.8cm]
+    \node[card, fill=NexusBlue!10, draw=NexusBlue, text width=3.2cm] (pass1) {
+      \textbf{Pass 1: Triage}\\
+      5-10 minutes\\
+      Title, Abstract, Intro, Conclusion\\
+      \textit{Goal: Is it relevant?}};
+      
+    \node[primarycard, right=of pass1, text width=3.2cm] (pass2) {
+      \textbf{Pass 2: The Core}\\
+      1 hour\\
+      Figures, Tables, Results, Discussion\\
+      \textit{Goal: Grasp findings}};
+      
+    \node[successcard, right=of pass2, text width=3.2cm] (pass3) {
+      \textbf{Pass 3: Deep Dive}\\
+      1-5 hours\\
+      Methods (Line by line)\\
+      \textit{Goal: Re-implement / Critique}};
+
+    \draw[flowarrow] (pass1) -- node[above, font=\scriptsize\bfseries] {If Yes} (pass2);
+    \draw[accentarrow] (pass2) -- node[above, font=\scriptsize\bfseries] {If Critical} (pass3);
+  \end{tikzpicture}
+  }
+  \end{center}
+\end{frame}
+
+% --- TYPES OF PAPERS ---
+\begin{frame}{Types of Academic Literature}
+  \begin{block}{Not all papers are created equal}
+    \begin{itemize}
+      \item \textbf{Primary Research:} Original data and experiments (Uses IMRAD).
+      \item \textbf{Review Articles:} Synthesis of dozens/hundreds of primary papers (Often skips Methods, focuses on themes).
+      \item \textbf{Preprints (e.g., arXiv):} Early drafts that have \textbf{not} been peer-reviewed. Read with extra skepticism.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% --- KEY TAKEAWAY ---
+\begin{frame}{Key Takeaway}
+  \begin{block}{What We Accomplished}
+    \begin{enumerate}
+      \item \textbf{IMRAD}: You know the universal blueprint of science.
+      \item \textbf{Non-linear reading}: You have permission to skip the Methods section.
+      \item \textbf{Efficiency}: You can triage a paper in under 10 minutes.
+    \end{enumerate}
+  \end{block}
+  \vspace{0.3cm}
+  \textbf{Next:} Module 0.2 --- Research Methodologies
+\end{frame}
+
+% --- EXERCISE PREVIEW ---
+\begin{frame}{Your Turn: Exercise}
+  \begin{exampleblock}{Exercise: The 10-Minute Triage}
+    Set a timer for 10 minutes. Open a dense research paper provided in the exercise files, and use Pass 1 to answer three specific questions without reading the main body text.
+  \end{exampleblock}
+\end{frame}
+
+% --- STANDOUT CLOSE ---
+\begin{frame}[standout]
+  You don't need to read every word to understand the science.\\
+  You just need to know where to look.
+\end{frame}
+
+\end{document}

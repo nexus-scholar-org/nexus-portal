@@ -1,0 +1,153 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+
+\title{Research Methodologies}
+\subtitle{Module 0.2: Quantitative, Qualitative, and Mixed Methods}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+% --- TITLE SLIDE ---
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% --- LEARNING OBJECTIVES ---
+\begin{frame}{What You'll Learn}
+  By the end of this lesson, you will be able to:
+  \begin{enumerate}
+    \item \textbf{Define} quantitative, qualitative, and mixed-methods paradigms.
+    \item \textbf{Identify} appropriate methodologies for different questions.
+    \item \textbf{Evaluate} the strengths and limitations of each approach.
+    \item \textbf{Explain} validity and reliability in research design.
+  \end{enumerate}
+\end{frame}
+
+% --- THE THREE PARADIGMS ---
+\begin{frame}{The Three Paradigms}
+  \begin{columns}[T]
+    \begin{column}{0.33\textwidth}
+      \begin{block}{Quantitative}
+        \begin{itemize}
+          \item Numbers \& Stats
+          \item Objective
+          \item Deductive (Test theory)
+          \item e.g., Surveys, RCTs
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \begin{exampleblock}{Qualitative}
+        \begin{itemize}
+          \item Words \& Meaning
+          \item Subjective
+          \item Inductive (Build theory)
+          \item e.g., Interviews
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \begin{alertblock}{Mixed Methods}
+        \begin{itemize}
+          \item Both combined
+          \item Triangulation
+          \item Complete ecosystem view
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- THE FOREST ANALOGY ---
+\begin{frame}{The Forest Analogy}
+  \begin{center}
+  \resizebox{0.92\linewidth}{!}{
+  \begin{tikzpicture}[node distance=1.2cm and 1.8cm]
+    \node[card, fill=NexusBlue!10, draw=NexusBlue, text width=3.5cm] (quant) {
+      \textbf{Satellite View}\\
+      (Quantitative)\\
+      \textit{Total biomass, broad trends, high scale, low context.}};
+      
+    \node[successcard, right=of quant, text width=3.5cm] (qual) {
+      \textbf{Ground View}\\
+      (Qualitative)\\
+      \textit{Studying one tree's root system. Deep context, low scale.}};
+  \end{tikzpicture}
+  }
+  \end{center}
+\end{frame}
+
+% --- MATCHING METHOD TO QUESTION ---
+\begin{frame}{Matching Methodology to the Question}
+  \begin{table}[]
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Research Question Type} & \textbf{Paradigm} \\ \hline
+    Does X cause Y? & \textbf{Quantitative} (Experimental) \\ \hline
+    How many people do Z? & \textbf{Quantitative} (Descriptive) \\ \hline
+    How do people experience X? & \textbf{Qualitative} (Phenomenology) \\ \hline
+    Why does culture Y behave this way? & \textbf{Qualitative} (Ethnography) \\ \hline
+    Does X work, and why do people like it? & \textbf{Mixed Methods} \\ \hline
+    \end{tabular}
+  \end{table}
+  \vspace{0.3cm}
+  \textit{Rule: Never pick your tool before you define your question.}
+\end{frame}
+
+% --- VALIDITY AND RELIABILITY ---
+\begin{frame}{Validity vs. Reliability}
+  \begin{block}{Two distinct requirements for good science}
+    \begin{itemize}
+      \item \textbf{Reliability (Consistency):} If someone else repeats the exact same study, will they get the exact same result?
+      \item \textbf{Validity (Accuracy):} Are you actually measuring what you claim to be measuring?
+    \end{itemize}
+  \end{block}
+  \vspace{0.3cm}
+  \textbf{Analogy:} A broken scale that always reads 100 lbs is perfectly \textit{reliable}, but completely \textit{invalid}.
+\end{frame}
+
+% --- DATA SATURATION ---
+\begin{frame}{Sample Sizes: Power vs. Saturation}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Quantitative: Statistical Power}
+        Driven by math. You need enough $N$ to prove that your result isn't just random chance (p < 0.05). Often requires hundreds or thousands of subjects.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Qualitative: Data Saturation}
+        Driven by information. You stop interviewing people when the newest interview yields no new insights or themes. Often reached at $N=12$ to $N=20$.
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- KEY TAKEAWAY ---
+\begin{frame}{Key Takeaway}
+  \begin{block}{What We Accomplished}
+    \begin{enumerate}
+      \item \textbf{Paradigms}: Quant (Numbers) vs Qual (Words).
+      \item \textbf{Alignment}: The research question dictates the methodology.
+      \item \textbf{Metrics}: Reliability (Consistency) vs Validity (Accuracy).
+    \end{enumerate}
+  \end{block}
+  \vspace{0.3cm}
+  \textbf{Next:} Module 0.3 --- The Publishing Ecosystem
+\end{frame}
+
+% --- EXERCISE PREVIEW ---
+\begin{frame}{Your Turn: Exercise}
+  \begin{exampleblock}{Exercise: Methodological Matchmaker}
+    Review three flawed research proposals, identify the methodological mismatch, and redesign the approach to correctly answer the core research question.
+  \end{exampleblock}
+\end{frame}
+
+% --- STANDOUT CLOSE ---
+\begin{frame}[standout]
+  A perfect statistical analysis of the wrong question\\
+  is still the wrong answer.
+\end{frame}
+
+\end{document}

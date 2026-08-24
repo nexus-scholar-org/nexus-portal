@@ -1,0 +1,5 @@
+- [x] Update master curriculum outline
+    - [x] Integrate the 6 Nexus Scholar tools into the main modules.
+    - [x] Add the "Bonus Curriculum" section for teaching how to build the tools.
+    - [x] Add the "Agent Curriculum" section for LLM integration.
+- [x] Create walkthrough summary

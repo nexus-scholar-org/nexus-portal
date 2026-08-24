@@ -1,0 +1,102 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+\usepackage{listings}
+\usepackage{booktabs}
+
+\title{Conducting a Systematic Literature Review}
+\subtitle{Module 3.4: The Capstone Integration}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{What You'll Learn}
+  \begin{enumerate}
+    \item \textbf{Describe} the PRISMA 2020 workflow.
+    \item \textbf{Map} each SLR phase to a Nexus tool.
+    \item \textbf{Construct} a PRISMA flow diagram.
+    \item \textbf{Evaluate} narrative vs. systematic reviews.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Narrative vs. Systematic}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Narrative Review}
+        \begin{itemize}
+          \item Author-driven selection
+          \item Subjective inclusion
+          \item Not reproducible
+          \item Susceptible to cherry-picking
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Systematic Review}
+        \begin{itemize}
+          \item Protocol-driven
+          \item Pre-defined criteria
+          \item Fully reproducible
+          \item Highest level of evidence
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{The PRISMA 2020 Flow}
+  \begin{center}
+  \resizebox{0.85\linewidth}{!}{
+  \begin{tikzpicture}[node distance=1.2cm]
+    \node[card, fill=gray!10, draw=gray, minimum width=8cm] (id) {\textbf{Identification}: 1,050 records from 3 databases};
+    \node[primarycard, minimum width=8cm, below=of id] (dedup) {\textbf{Dedup}: 310 removed $\rightarrow$ 740 unique};
+    \node[card, fill=NexusBlue!10, draw=NexusBlue, minimum width=8cm, below=of dedup] (screen) {\textbf{Screening}: 580 excluded by title/abstract $\rightarrow$ 160};
+    \node[card, fill=NexusRed!10, draw=NexusRed, minimum width=8cm, below=of screen] (elig) {\textbf{Eligibility}: 90 excluded by full text $\rightarrow$ 70};
+    \node[successcard, minimum width=8cm, below=of elig] (inc) {\textbf{Included}: 70 papers for synthesis};
+    
+    \draw[flowarrow] (id) -- (dedup);
+    \draw[flowarrow] (dedup) -- (screen);
+    \draw[flowarrow] (screen) -- (elig);
+    \draw[flowarrow] (elig) -- (inc);
+  \end{tikzpicture}
+  }
+  \end{center}
+\end{frame}
+
+\begin{frame}{The Nexus SLR Pipeline}
+  \begin{table}
+  \footnotesize
+  \begin{tabular}{lll}
+  \toprule
+  \textbf{PRISMA Stage} & \textbf{Nexus Tool} & \textbf{Command} \\
+  \midrule
+  Identification & \texttt{scholar-search-kit} & \texttt{scholar-search build} \\
+  Import externals & \texttt{scholar-search-kit} & \texttt{scholar-search import} \\
+  Deduplication & \texttt{scholar-search-kit} & \texttt{scholar-search dedup} \\
+  Full-text retrieval & \texttt{scholar-pdf-kit} & \texttt{scholar-pdf download} \\
+  Citation analysis & \texttt{scholar-graph-kit} & \texttt{scholar-graph build} \\
+  Semantic querying & \texttt{scholar-rag-kit} & \texttt{scholar-rag query} \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+  \vspace{0.2cm}
+  \textit{Every PRISMA stage maps to a reproducible CLI command.}
+\end{frame}
+
+\begin{frame}{Your Turn: Exercise}
+  \begin{exampleblock}{Exercise: The Protocol}
+    Draft an SLR protocol: define search strings, inclusion/exclusion criteria, and fill in a blank PRISMA flow diagram using the Nexus tools.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[standout]
+  Prove your objectivity.\\
+  Document your process.
+\end{frame}
+
+\end{document}

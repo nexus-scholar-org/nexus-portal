@@ -1,0 +1,124 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{nexus_theme}
+\usepackage{listings}
+
+\title{Designing Your Research Question}
+\subtitle{Module 2.1: Finding Literature}
+\author{Nexus Scholar Suite --- Modern Research Methodologies}
+\date{}
+
+\begin{document}
+
+% --- TITLE SLIDE ---
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% --- LEARNING OBJECTIVES ---
+\begin{frame}{What You'll Learn}
+  By the end of this lesson, you will be able to:
+  \begin{enumerate}
+    \item \textbf{Construct} a research question using PICO, SPIDER, or Heilmeier.
+    \item \textbf{Distinguish} between a topic, a gap, and a question.
+    \item \textbf{Perform} a systematic gap analysis.
+    \item \textbf{Validate} your question using the FINER criteria.
+  \end{enumerate}
+\end{frame}
+
+% --- THE FUNNEL ---
+\begin{frame}{Topic $\neq$ Gap $\neq$ Question}
+  \begin{center}
+  \resizebox{0.8\linewidth}{!}{
+  \begin{tikzpicture}
+    \node[card, fill=gray!10, draw=gray, minimum width=12cm, minimum height=1.2cm] (topic) {\textbf{TOPIC:} ``Machine learning in healthcare''};
+    \node[primarycard, minimum width=9cm, minimum height=1.2cm, below=0.3cm of topic] (gap) {\textbf{GAP:} ``No study has compared transformers to RNNs for pediatric ICU readmission''};
+    \node[successcard, minimum width=6cm, minimum height=1.2cm, below=0.3cm of gap] (rq) {\textbf{QUESTION:} ``How does transformer-based prediction compare to RNN-based models in AUROC?''};
+    
+    \draw[->, thick, gray] (topic.south) -- (gap.north);
+    \draw[->, thick, gray] (gap.south) -- (rq.north);
+  \end{tikzpicture}
+  }
+  \end{center}
+  \vspace{0.2cm}
+  \textit{Most PhD students confuse a topic for a question. This leads to years of unfocused work.}
+\end{frame}
+
+% --- FRAMEWORKS ---
+\begin{frame}{Frameworks for Crafting Questions}
+  \begin{columns}[T]
+    \begin{column}{0.32\textwidth}
+      \begin{block}{\textbf{PICO}\\(Health Sciences)}
+        \begin{itemize}
+          \item \textbf{P}opulation
+          \item \textbf{I}ntervention
+          \item \textbf{C}omparison
+          \item \textbf{O}utcome
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \begin{exampleblock}{\textbf{SPIDER}\\(Qualitative)}
+        \begin{itemize}
+          \item \textbf{S}ample
+          \item \textbf{P}henomenon
+          \item \textbf{D}esign
+          \item \textbf{E}valuation
+          \item \textbf{R}esearch type
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \begin{alertblock}{\textbf{Heilmeier}\\(Engineering/CS)}
+        \begin{itemize}
+          \item What are you doing?
+          \item How is it done today?
+          \item What's new?
+          \item Who cares?
+          \item What are the risks?
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- GAP ANALYSIS ---
+\begin{frame}{Systematic Gap Analysis}
+  \begin{enumerate}
+    \item \textbf{Search broadly:} Use \texttt{scholar-search-kit} with a wide query.
+    \item \textbf{Build the citation graph:} Use \texttt{scholar-graph-kit} to visualize connections.
+    \item \textbf{Find white space:} Look for disconnected or weakly-connected clusters in the network. These are under-explored intersections.
+    \item \textbf{Read ``Future Work'':} The highest-PageRank papers' Future Work sections are literal roadmaps to publishable questions.
+  \end{enumerate}
+\end{frame}
+
+% --- FINER CRITERIA ---
+\begin{frame}{The FINER Test}
+  Before committing to your question, validate it:
+  \vspace{0.3cm}
+  \begin{itemize}
+    \item[\ding{51}] \textbf{F}easible --- Can I answer this with my resources and time?
+    \item[\ding{51}] \textbf{I}nteresting --- Will my committee and the field care?
+    \item[\ding{51}] \textbf{N}ovel --- Has this exact question been answered?
+    \item[\ding{51}] \textbf{E}thical --- Can I pursue it without causing harm?
+    \item[\ding{51}] \textbf{R}elevant --- Does the answer advance knowledge?
+  \end{itemize}
+  \vspace{0.3cm}
+  \textit{If it fails even one criterion, refine before investing months of work.}
+\end{frame}
+
+% --- EXERCISE PREVIEW ---
+\begin{frame}{Your Turn: Exercise}
+  \begin{exampleblock}{Exercise: The Question Forge}
+    Starting from a broad topic, narrow it down through a gap analysis and produce a FINER-validated research question using the appropriate framework for your discipline.
+  \end{exampleblock}
+\end{frame}
+
+% --- STANDOUT CLOSE ---
+\begin{frame}[standout]
+  A good research question is the difference\\
+  between a thesis that takes three years\\
+  and one that takes seven.
+\end{frame}
+
+\end{document}
